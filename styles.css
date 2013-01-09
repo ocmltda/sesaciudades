@@ -1,0 +1,91 @@
+.forms {
+	background-color: #D5ECFE;
+	padding: 3px;
+	border: 1px solid #CAE4FF;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666;
+}
+.myaccount {
+background-color: #E4F8FA;
+font: normal 12px arial,verdana;
+padding: 2px 5px;
+border: 1px solid #CAE4FF;
+
+}
+
+a {
+color: #03c;
+}
+
+.main {
+	font: normal 12px arial,verdana;
+	padding: 2px;
+	margin: 2px;
+	text-align: center;
+
+ }
+ 
+ .titlehdr {
+ font: normal 22px arial, verdana;
+ color: #c00;
+ border-bottom: 1px solid #c00;
+ 
+ 
+ }
+.fondoreg {
+	background-image: url(img/fondoreg.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+ 
+.msg {
+padding: 5px;
+width: 600px;
+margin: 2px;
+color: #c00;
+border: 1px solid #c00;
+background-color: #FEF1ED;
+font: bold 13px  verdana;
+} 
+ 
+.error {
+font: normal 11px arial, verdana;
+color: #c00;
+border: 1px solid #c00;
+padding: 2px;
+margin: 5px;
+float: left;
+background-color: #FEF1ED;
+}
+ 
+ .example {
+font: normal 10px arial;
+color: red;
+}
+.approved {
+font: normal 10px arial;
+color: green;
+}
+
+.loginform {
+font: 16px normal arial;
+background-color: #E4F8FA;
+font: normal 12px arial,verdana;
+padding: 3px;
+border: 1px solid #CAE4FF;
+}
+
+.loginform #txtbox {
+font: bold 16px arial;
+color: #f00;
+}
+.texto {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	right: 10px;
+}

@@ -1,0 +1,134 @@
+<?php
+
+include '../dbc.php';
+
+
+
+// texto a convertir
+
+if(isset($_POST['Generar'])){
+
+$nombre = $_POST['nombre'];
+
+$empresa = $_POST['empresa'];
+$rut = $_POST['rut'];
+
+$id = $_POST['session'];
+
+$contador = $_POST['contador'];
+
+$contador = $contador +1;
+
+$credenciales = $_POST['creden'];
+
+$credenciales = "'".$credenciales.', '.$nombre."'";
+
+		mysql_query("UPDATE users SET
+
+					`conta_credencial` = ".$contador.",
+
+					`credenciales_desc` = ".$credenciales."
+
+			 WHERE id=".$id."") 
+
+			 or die(mysql_error());
+
+			
+
+}
+
+
+
+// Imagen de fondo
+
+$im = imagecreatefromjpeg('tarjeta.jpg');
+
+
+
+//Fuente y color
+
+$font ='./goth.ttf';
+
+$font_size = 16;
+
+$font_color =  0x2C4176;
+
+$font_color2 =  0x373737;
+
+
+
+// Impresion del Texto segun los parametros de acontinuacion
+
+//imagettftext ( resource $image , float $size , float $angle , int $x , int $y , int $color , string $fontfile , string $text )
+
+imagettftext($im, $font_size, 0, 38, 230, $font_color2, $font, $nombre); //Fondo blanco Nombre
+//imagettftext($im, $font_size, 0, 261, 391, $font_color2, $font, $rut); //Fondo blanco Nombre
+//imagettftext($im, $font_size, 0, 260, 98, $font_color, $font, $empresa); //texto azul Nombre
+
+
+
+
+
+
+// mostrar la imagen
+
+//header("Content-type: image/jpeg");
+
+$random = rand();
+
+imagejpeg($im,'credenciales/'.$random.'.jpg');
+
+imagedestroy($im); 
+
+?> 
+
+
+
+<table width="362" border="0">
+
+<tr>
+
+    <td colspan="2"><p><img src="credenciales/<?php echo $random ?>.jpg" /></p>
+
+    <p>&nbsp;</p></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="133">Imprimir Credencial:</td>
+
+    <td width="219">
+
+      <input type="button" name="imprimir" value="Imprimir" onclick='window.print();'/>
+
+    </td>
+
+  </tr>
+
+  <form id="formcorreo" name="formcorreo" method="post" action="../mysettings.php">
+
+  <tr>
+
+    <td>Enviar por email:</td>
+
+    <td><input name="email" type="text" size="50" /></td>
+
+    <input type="hidden" name="beneficiario" value="<?php echo $nombre ?>"/>
+
+    <input type="hidden" name="archivo" value="<?php echo $random ?>"/>
+
+  </tr>
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td><input type="submit" name="correo" value="Enviar" /></td>
+
+  </tr>
+
+  </form>
+
+</table>
+

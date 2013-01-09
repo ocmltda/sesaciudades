@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="dw_new_image_map" value="&lt;MAP name=&quot;Map2&quot;&gt;&#xD;  &lt;AREA SHAPE=&quot;rect&quot; COORDS=&quot;11,10,220,56&quot; HREF=&quot;../opinion.php&quot;&gt;&#xD;  &lt;AREA SHAPE=&quot;rect&quot; COORDS=&quot;12,57,218,99&quot; HREF=&quot;../preguntas.php&quot;&gt;&#xD;  &lt;AREA SHAPE=&quot;rect&quot; COORDS=&quot;14,111,219,151&quot; HREF=&quot;../register.php&quot;&gt;&#xD;  &lt;AREA SHAPE=&quot;rect&quot; COORDS=&quot;4,181,232,256&quot; HREF=&quot;../cupones.php&quot;&gt;&#xD;  &lt;AREA SHAPE=&quot;rect&quot; COORDS=&quot;6,261,227,332&quot; HREF=&quot;../sorteos.php&quot;&gt;&#xD;  &lt;AREA SHAPE=&quot;rect&quot; COORDS=&quot;16,338,215,402&quot; HREF=&quot;../promo.php&quot;&gt;&#xD;&lt;/MAP&gt;" />
+</info>

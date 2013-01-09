@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+
+.tabladirectorio {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	padding: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #C7DDFE;
+	border-right-color: #C7DDFE;
+	border-bottom-color: #C7DDFE;
+	border-left-color: #C7DDFE;
+}
+.fondoSugerencias {
+	background-image: url(../img/fondo.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.sorteofondo {
+	background-image: url(../img/fondosorteo.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border: 1px solid #CCC;
+	padding: 10px;
+	background-color: #ECECEC;
+}
+.fondoregistro {
+	background-image: url(../img/fondoregsesa.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.fondogeneral {
+	background-color: #B54515;
+	background-image: url(../img/fondoweb.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.fondo {
+}
+
+
+.fondoPrmo {
+	background-image: url(../img/fondo2promo.jpg);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+.fondosesa {
+	background-image: url(../img/fondosesa.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+
+
+.fondoatras {
+	background-image: url(../img/fondo_atras.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #D1DEEF;
+}
+.fondoatras2 {
+	background-image: url(../img/fondo_atras2.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+
+.fondomenu {
+}
+.txtsesadestacado {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #CB0101;
+}
+
+.fondo2 {
+	background-image: url(../img/fondocotizar.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-attachment: fixed;
+}
+
+
+#utilidades {
+	display: block;
+	height: 125px;
+	width: 205px;
+	position: relative;
+	overflow: auto;
+	margin-left: 25px;
+	top: auto;
+	margin-top: 60px;
+	left: auto;
+	right: auto;
+	bottom: auto;
+}
+.fondosesabeneficios {
+	background-image: url(../img/fondobeneficios.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+
+.fondosup {
+	background-image: url(../img/fondo_wb.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+a {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #039;
+	text-decoration: none;
+}
+
+.texto {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333;
+	text-align: justify;
+}
+.fondomenu {
+	background-image: url(../img/m4.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #053788;
+}
+.flashUrgencia {
+	border: 1px solid #F00;
+}
+.imgServClinic {
+	border: 1px solid #CC0001;
+}
+
+.titulosNuestraClinica {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #DB2A00;
+}
+.admin {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666;
+}
+
+.titulosNuestraClinica2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #DA2B00;
+}
+.tablaclinica {
+	border: 1px solid #C7DDFE;
+	padding: 10px;
+	margin: 10px;
+	background-color: #C6ECFB;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+.suptabla {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #35426E;
+}
+
+
+.tablaUrgencia {
+	background-image: url(../serv_clinic/img/fondo_urgencia.jpg);
+	border: 1px solid #F00;
+	background-color: #FFF;
+	background-repeat: repeat-x;
+	background-position: left top;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333;
+}
+.tituloUrgencia {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #F00;
+}
+.imgUrgencia {
+	border: 1px solid #F00;
+}
+.MaternidadTitulo {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #D84D53;
+}
+
+
+* {
+	list-style-type: disc;
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+#navegacion {
+}
+#navegacion li:hover ul {
+	visibility: visible;
+}
+
+/* parche explorer */
+#navegacion li.sfhover ul {
+	visibility: visible;
+}
+#listamater li {
+	list-style-type: disc;
+	list-style-position: inside;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+#urgenciabull li {
+	list-style-image: url(../serv_clinic/img/bull_urgencia.jpg);
+	list-style-type: disc;
+	display: list-item;
+}
+.imgmat {
+	border: 1px solid #F36;
+}
+a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #2D71FF;
+	text-decoration: none;
+}
+.imgTalleres {
+	border: 1px solid #FE8600;
+}
+.list_especial {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #039;
+	background-color: #E6F7FF;
+	border: 1px solid #D5F1FF;
+}
+.botonEspecia {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #036;
+	background-color: #F0FAFF;
+	border: 1px solid #FFF;
+	text-align: left;
+}
+
+
+/*----</Titulo 2>----*/
+/*----<Listado Especial>----*/
+.list_especial {
+	border:1px solid #D5F1FF;
+	background-color: #FFFFFF;
+}
+
+.list_especial td {
+	border:1px solid #C6DBFF;
+	background-color: #F0FAFF;
+}
+
+.list_especial a:link, .list_especial a:active, .list_especial a:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#003366;
+	font-size:11px;
+	font-weight:bold;
+	text-transform:uppercase;
+	text-decoration:none;
+	background-color:#DFEEFD;
+	/*margin-right:100px;*/
+display:block;
+}
+
+.list_especial a:hover{
+text-decoration:underline
+}
+.sesasegerenci {
+	background-image: url(../img/fondosesasug.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+
+.tituloPresupuesto {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #019FE6;
+}
+.form {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #CC0001;
+	background-color: #FBFBFB;
+	border: 1px solid #D4D4D4;
+}
+#AS {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+#navegacion #ccr a {
+	display: block;
+	width: 180px;
+}
+.txt {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
