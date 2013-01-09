@@ -1,13 +1,21 @@
 <?php
-	require_once('include/funciones.php');
+require_once('include/funciones.php');
+require_once('include/class.TemplatePower.inc.php');
+require_once('include/db_mysql.inc');
 
-	start_sess();
+//rescato el nombre de la region
+$db = new DB_Sql;
+	
+$db->query('SELECT reg_nombre FROM region WHERE reg_id = ' . $_GET['reg']);//consulta a la BD
 
-	//si no existe la sesion entonces voy al login
-	if (!isset($_SESSION['xmlSession']) && !isset($_SESSION['rut']) && !isset($_SESSION['dv']))
-	{
-		header('location: login.php?rf=cp');
-	}
+$nomReg = "";
+//listo las categorias
+while($db->next_record())
+{
+	//$t->newBlock("categorias");
+	//$t->assign("idcat", $db->Record["CAT_ID"] . "");
+	$nomReg = $db->Record["reg_nombre"];
+}
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/mama.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -131,29 +139,27 @@ body {
           <td bgcolor="#FFFFFF" style="padding:10px;"><!-- InstanceBeginEditable name="Contenido" -->
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td align="left" style=" padding-left:18px"><br>
-                  <img src="img/region.jpg" width="509" height="836" border="0" usemap="#Map5">
-                  <map name="Map5">
-                    <area shape="rect" coords="270,66,485,97" href="categorias.php?reg=15">
-                    <area shape="rect" coords="276,97,483,143" href="categorias.php?reg=1">
-                    <area shape="rect" coords="274,148,485,219" href="categorias.php?reg=2">
-                    <area shape="rect" coords="267,225,482,291" href="categorias.php?reg=3">
-                    <area shape="rect" coords="252,295,458,335" href="categorias.php?reg=4">
-                    <area shape="rect" coords="250,343,422,362" href="categorias.php?reg=5">
-                    <area shape="rect" coords="253,364,428,383" href="categorias.php?reg=13">
-                    <area shape="rect" coords="257,384,486,404" href="categorias.php?reg=6">
-                    <area shape="rect" coords="233,402,388,425" href="categorias.php?reg=7">
-                    <area shape="rect" coords="220,428,395,455" href="categorias.php?reg=8">
-                    <area shape="rect" coords="224,457,424,483" href="categorias.php?reg=9">
-                    <area shape="rect" coords="218,486,376,511" href="categorias.php?reg=14">
-                    <area shape="rect" coords="211,514,393,570" href="categorias.php?reg=10">
-                    <area shape="rect" coords="206,577,481,677" href="categorias.php?reg=11">
-                    <area shape="rect" coords="201,682,454,821" href="categorias.php?reg=12">
+                <td align="left" style=" padding-left:18px"><span class="titulosNuestraClinica2"><?php echo $nomReg; ?></span><br>
+                <img src="img/cupones_ben.jpg" width="627" height="483" border="0" usemap="#Map5">
+                <map name="Map5">
+                  <area shape="rect" coords="35,349,105,460" href="cupXregXcat.php?cat=1&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="26,100,109,201" href="cupXregXcat.php?cat=1&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="136,101,211,203" href="cupXregXcat.php?cat=1&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="244,99,319,206" href="cupXregXcat.php?cat=1&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="348,96,418,207" href="cupXregXcat.php?cat=1&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="28,223,117,340" href="cupXregXcat.php?cat=XX&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="130,231,208,331" href="cupXregXcat.php?cat=XX&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="236,225,315,330" href="cupXregXcat.php?cat=XX&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="337,220,412,335" href="cupXregXcat.php?cat=XX&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="439,94,509,205" href="cupXregXcat.php?cat=XX&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="536,92,606,203" href="cupXregXcat.php?cat=XX&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="536,225,606,336" href="cupXregXcat.php?cat=XX&reg=<?php echo $_GET['reg']; ?>">
+                  <area shape="rect" coords="441,226,511,337" href="cupXregXcat.php?cat=XX&reg=<?php echo $_GET['reg']; ?>">
                 </map></td>
               </tr>
             </table>
       <br />
-        
+        <script src="http://b.scorecardresearch.com/c2/6906501/cs.js#sitio_id=235524&path=/home/cupones/r13"></script>
           <!-- InstanceEndEditable -->
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
