@@ -17,9 +17,15 @@ class DB_Sql {
   var $User     = "";
   var $Password = "";*/
   var $Host     = "localhost";
+  var $Database = "sesaciudades";
+  var $User     = "root";
+  var $Password = "";
+
+  //http://www.ocmltda.com/sesaciudades/
+  /*var $Host     = "localhost";
   var $Database = "ocmltda_sesaciudades";
   var $User     = "ocmltda_sesa";
-  var $Password = "sesaciudades";
+  var $Password = "sesaciudades";*/
 
   /* public: configuration parameters */
   var $Auto_Free     = 0;     ## Set to 1 for automatic mysql_free_result()
