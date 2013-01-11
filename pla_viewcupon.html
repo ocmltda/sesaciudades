@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{nomcupon}</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<script type="text/javascript">
+function resizeMeHeight(addHeight)
+{
+    width = document.getElementById("content").offsetHeight;
+    width  = document.getElementById("content").offsetWidth;
+    window.resizeTo(width, height+addHeight);
+}
+</script>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><a href="javascript:print();"><img src="cup-imagenes/{imgcupon}" width="{anchocupon}" height="{altocupon}" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Locales Adheridos</td>
+  </tr>
+  
+  <tr>
+    <td><form name="form1" method="post" action="">
+      <input name="idcupon" type="hidden" id="idcupon" value="{idcupon}">
+      <select name="selLocAdh" id="selLocAdh">
+        <option value="">-- Seleccione Local --</option>
+        <!-- START BLOCK : localesadh -->
+        <option value="{locId}">{locNom}</option>
+        <!-- END BLOCK : localesadh -->
+      </select>
+        <input type="submit" name="btnVer" id="btnVer" value="Ver" onClick="//document.getElementById('gmaps').style.display = ''; document.getElementById('gmaps').innerHTML = document.getElementById('selLocAdh').value;  //resizeMeHeight(50);">
+    </form>    </td>
+  </tr>
+  <tr>
+    <td><div id="gmaps">{direcc}{gmaploc}</div></td>
+  </tr>
+</table>
+</body>
+</html>
