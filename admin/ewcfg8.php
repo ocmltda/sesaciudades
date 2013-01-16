@@ -18,7 +18,7 @@ define("EW_DEFAULT_DATE_FORMAT_ID", "7", TRUE); // Default date format
 define("EW_DATE_SEPARATOR", "/", TRUE); // Date separator
 define("EW_UNFORMAT_YEAR", 50, TRUE); // Unformat year
 define("EW_PROJECT_NAME", "sesaciudadesbasico", TRUE); // Project name
-define("EW_RANDOM_KEY", 'lafHyZT2p9Ro4dwA', TRUE); // Random key for encryption
+define("EW_RANDOM_KEY", '1Lp4a9d3K36uvPmd', TRUE); // Random key for encryption
 define("EW_PROJECT_STYLESHEET_FILENAME", "phpcss/sesaciudadesbasico.css", TRUE); // Project stylesheet file name
 define("EW_CHARSET", "utf-8", TRUE); // Project charset
 define("EW_EMAIL_CHARSET", EW_CHARSET, TRUE); // Email charset
