@@ -25,15 +25,15 @@ while($db->next_record())
 
 $t->assign('idcupon', $_REQUEST['idcupon'] . '');
 
-$db->query('SELECT DISTINCT local.loc_id, local.loc_nombre, local.loc_direccion, local.loc_googlemaps FROM local INNER JOIN empresa ON empresa.emp_id = local.emp_id INNER JOIN cupon ON empresa.emp_id = cupon.emp_id INNER JOIN localadherido ON local.loc_id = localadherido.loc_id AND cupon.cup_id = localadherido.cup_id AND empresa.emp_id = localadherido.emp_id WHERE cupon.cup_id = ' . $_REQUEST['idcupon'] . ' AND local.loc_vigente = 1 AND cupon.cup_vigente = 1');
+$db->query('SELECT DISTINCT LOC.loc_id, LOC.loc_nombre, LOC.loc_direccion, LOC.loc_comuna, LOC.loc_ciudad, LOC.loc_googlemaps FROM `local` AS LOC INNER JOIN localadherido AS LAD ON LOC.loc_id = LAD.loc_id WHERE LAD.cup_id = ' . $_REQUEST['idcupon'] . ' AND LOC.loc_vigente = 1');
 
 while($db->next_record())
 {
 	$t->newBlock('localesadh');
 	$t->assign('locId', $db->Record['loc_id'] . '');
-	//$t->assign('locId', $db->Record['loc_googlemaps'] . '');
+	$t->assign('linkGmap', $db->Record['loc_googlemaps'] . '');
 	$t->assign('locNom', $db->Record['loc_nombre'] . '');
-	if ($_POST['selLocAdh'] == $db->Record['loc_id'])
+	if ($_POST['idlocal'] == $db->Record['loc_id'])
 	{
 		$t->assign('_ROOT.direcc', $db->Record['loc_direccion'] . '<br>');
 		$t->assign('_ROOT.gmaploc', $db->Record['loc_googlemaps'] . '');

@@ -24,7 +24,7 @@ while($db->next_record())
 }
 
 //listo las categorias
-$db->query('SELECT DISTINCT CAT.cat_id, CAT.cat_nombre, CAT.cat_imagen_nombre FROM comuna AS COM INNER JOIN `local` AS LOC ON COM.com_id = LOC.com_id INNER JOIN empresa AS EMP ON EMP.emp_id = LOC.emp_id INNER JOIN cupon AS CUP ON EMP.emp_id = CUP.emp_id INNER JOIN categoria AS CAT ON CAT.cat_id = CUP.cat_id WHERE COM.reg_id = ' . $_GET['reg'] . ' AND CUP.cup_vigente = 1 AND CAT.cat_mostrar = 1 ORDER BY CAT.cat_id ASC');//consulta a la BD
+$db->query('SELECT DISTINCT CAT.cat_id, CAT.cat_nombre, CAT.cat_imagen_nombre FROM categoria AS CAT INNER JOIN cupon_categ AS CCA ON CAT.cat_id = CCA.cat_id INNER JOIN cupon AS CUP ON CUP.cup_id = CCA.cup_id INNER JOIN cupon_region AS CUR ON CUP.cup_id = CUR.cup_id WHERE CUR.reg_id = ' . $_GET['reg'] . ' AND CAT.cat_mostrar = 1 AND CUP.cup_vigente = 1 ORDER BY CAT.cat_id ASC');//consulta a la BD
 
 $jk = 0;
 $xy = 0;

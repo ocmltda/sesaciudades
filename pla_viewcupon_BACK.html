@@ -13,6 +13,14 @@ body {
 }
 -->
 </style>
+<script type="text/javascript">
+function resizeMeHeight(addHeight)
+{
+    width = document.getElementById("content").offsetHeight;
+    width  = document.getElementById("content").offsetWidth;
+    window.resizeTo(width, height+addHeight);
+}
+</script>
 </head>
 
 <body>
@@ -28,16 +36,15 @@ body {
   </tr>
   
   <tr>
-    <td><form name="form1" method="post" action="" id="form1">
+    <td><form name="form1" method="post" action="">
       <input name="idcupon" type="hidden" id="idcupon" value="{idcupon}">
-      <input name="idlocal" type="hidden" id="idlocal" value="">
       <select name="selLocAdh" id="selLocAdh">
         <option value="">-- Seleccione Local --</option>
         <!-- START BLOCK : localesadh -->
-        <option value="{linkGmap}" locId="{locId}">{locNom}</option>
+        <option value="{locId}">{locNom}</option>
         <!-- END BLOCK : localesadh -->
       </select>
-        <input type="button" name="btnVer" id="btnVer" value="Ver" onClick="window.open(document.href=document.getElementById('selLocAdh').value);//var mySel=document.getElementById('selLocAdh');document.getElementById('idlocal').value = mySel.getAttribute('locId');alert(mySel.getAttribute('locId'));//window.open(document.href=document.getElementById('selLocAdh').value);document.getElementById('form1').submit();">
+        <input type="submit" name="btnVer" id="btnVer" value="Ver" onClick="//document.getElementById('gmaps').style.display = ''; document.getElementById('gmaps').innerHTML = document.getElementById('selLocAdh').value;  //resizeMeHeight(50);">
     </form>    </td>
   </tr>
   <tr>

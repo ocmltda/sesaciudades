@@ -24,7 +24,7 @@ while($db->next_record())
 }
 
 //listo los cupones de la region
-$db->query('SELECT DISTINCT cupon.cup_id, cupon.cup_nombre, cupon.cup_preview_nombre, cupon.cup_imagen_nombre, cupon.cup_preview_ancho, cupon.cup_preview_alto, cupon.cup_imagen_ancho, cupon.cup_imagen_alto FROM comuna INNER JOIN `local` ON comuna.com_id = `local`.com_id INNER JOIN empresa ON empresa.emp_id = `local`.emp_id INNER JOIN cupon ON empresa.emp_id = cupon.emp_id INNER JOIN categoria ON categoria.cat_id = cupon.cat_id WHERE comuna.reg_id = ' . $_GET['reg'] . ' AND categoria.cat_id = ' . $_GET['cat']);//consulta a la BD
+$db->query('SELECT DISTINCT CUP.cup_id, CUP.cup_nombre, CUP.cup_preview_nombre, CUP.cup_preview_ancho, CUP.cup_preview_alto, CUP.cup_imagen_nombre, CUP.cup_imagen_ancho, CUP.cup_imagen_alto FROM cupon_categ AS CCA INNER JOIN cupon AS CUP ON CUP.cup_id = CCA.cup_id INNER JOIN cupon_region AS CUR ON CUP.cup_id = CUR.cup_id WHERE CUR.reg_id = ' . $_GET['reg'] . ' AND CCA.cat_id = ' . $_GET['cat'] . ' AND CUP.cup_vigente = 1 ORDER BY CUP.cup_id DESC');//consulta a la BD
 
 $jk = 0;
 $xy = 0;
@@ -49,7 +49,7 @@ while($db->next_record())
 	$t->assign('imgprvcupon', $db->Record['cup_preview_nombre'] . '');
 	$t->assign('imgcupon', $db->Record['cup_imagen_nombre'] . '');
 	$t->assign('anchocuponpopup', $db->Record['cup_imagen_ancho'] + 20 . '');
-	$t->assign('altocuponpopup', $db->Record['cup_imagen_alto'] + 230 . '');
+	$t->assign('altocuponpopup', $db->Record['cup_imagen_alto'] + 150 . '');
 	
 	if ($jk == $maxCupFila)
 	{
