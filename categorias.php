@@ -31,7 +31,7 @@ $xy = 0;
 $maxCupFila = 6;
 $numCupones = $db->nf();
 $numFilas = floor($numCupones / $maxCupFila);
-$restoFilas = $maxCupFila - ($numCupones % $maxCupFila);
+$restoFilas = $maxCupFila - ($numCupones % $maxCupFila) + 1;
 //echo $numCupones . '|' . $maxCupFila . '|' . $numFilas . '|' . $restoFilas;
 //listo las categorias
 while($db->next_record())
@@ -40,7 +40,7 @@ while($db->next_record())
 	$jk++;
 	$xy++;
 	if ($jk == 1)
-		$t->assign('trini', '<tr align="center">');
+		$t->assign('trini', '<tr align="left">');
 	else
 		$t->assign('trini', '');
 	$t->assign('idcat', $db->Record['cat_id'] . '');
